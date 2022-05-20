@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+  <body></body>
+  <script>
+    for (let i = 0; i < 8; i++) {
+      const chessRow = document.createElement("div");
+      chessRow.setAttribute("id", `chessRow`);
+      document.getElementById("chessRow");
+      document.body.appendChild(chessRow);
+      //   console.log(`chessrow`);
+      chessRow.style.width = "800px";
+      chessRow.style.height = "100px";
+      chessRow.style.display = "flex";
+      chessRow.style.flexDirection = "row";
+      if (i % 2 == 0) {
+        chessRow.style.backgroundColor = "white";
+      } else {
+        chessRow.style.backgroundColor = "black";
+      }
+
+      for (let j = 0; j < 8; j++) {
+        console.log(j);
+        const chessCube = document.createElement("div");
+        chessCube.setAttribute("id", "chessCube");
+        document.getElementById("chessCube");
+        chessRow.appendChild(chessCube);
+        chessCube.style.width = "100px";
+        chessCube.style.height = "100px";
+        chessCube.style.border = " 1px  solid black";
+        if (i % 2 == 0 && j % 2 !== 0) {
+          chessCube.style.backgroundColor = "white";
+        } else if (i % 2 == 0 && j % 2 == 0) {
+          chessCube.style.backgroundColor = "black";
+        } else if (i % 2 !== 0 && j % 2 == 0) {
+          chessCube.style.backgroundColor = "white";
+        }
+      }
+    }
+  </script>
+</html>
